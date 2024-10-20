@@ -1,0 +1,8 @@
+instagrapi==2.1.2
+gspread==6.1.2
+google-api-python-client==2.146.0
+python-dotenv==1.0.1
+numpy==1.26.4
+openai==1.17.0
+pydantic==2.9.2
+pandas==2.2.2
