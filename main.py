@@ -1,5 +1,4 @@
 import pandas as pd
-from saved_collections.insta_connection import recipes_collection_media
 from services.google_api import RECIPES_DB_SHEET_ID, RECIPES_TEMPLATE_DOC_ID, drive_service, sheets_service, SHARE_EMAIL
 from services.google_api import create_find_google_folder
 from recipes.main import create_post_recipes_doc, create_text_recipes_doc
@@ -7,6 +6,7 @@ from recipes.main import create_post_recipes_doc, create_text_recipes_doc
 FOLDER_NAME = 'Recipes'
 
 def get_recipes_insta():
+    from saved_collections.insta_connection import recipes_collection_media
 
     folder_id = create_find_google_folder(drive_service = drive_service, folder_name = FOLDER_NAME, email = SHARE_EMAIL)
 

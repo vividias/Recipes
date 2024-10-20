@@ -49,4 +49,5 @@ Only if you want to be able to get recipes from instagram collections.
 - Make more variables configurable
 - Improve code robustness 
 - Get recipes from input url
+- Get the recipes from image of a recipe book
 - Add the ability to choose different templates

@@ -3,8 +3,8 @@ from instagrapi.types import Media
 from recipes.schemas import Recipes, RecipeExists
 from recipes.utils import recipes_replace_text_with_formatting, insert_image_at_bottom_left, download_video_url_and_upload_to_drive
 from services.llm_model import LLMModel
-from services.google_api import SHARE_EMAIL, drive_service, docs_service
-from services.google_api import copy_template_to_folder, share_document
+from services.google_api import drive_service, docs_service
+from services.google_api import copy_template_to_folder
 
 llm_model = LLMModel()
 
@@ -21,7 +21,7 @@ def create_recipes_doc(sheets_db, folder_id: str, id: str, recipes: Recipes, rec
                 print('Image added successfully.')
 
             link_url = str(download_video_url_and_upload_to_drive(drive_service=drive_service, video_url=video_url, file_name=f'{id}.mp4')) \
-                if (video_url is not None and video_url!='None') else ''
+                if (video_url is not None and video_url!='') else ''
             new_row = [id,
                 link_url,
                 post_recipe.title.title(),
