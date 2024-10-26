@@ -31,6 +31,7 @@ Retrieve recipes from posts of a private collection in Instagram or from any tex
     - doc_link
     - (you can add any more that you like after the above ones, it won't break the code)
 - Have the sheet DB id in the environment variable "RECIPES_DB_SHEET_ID"
+![recipe_done_from_template](readme_imgs/recipe_done_from_template.png)
 
 ## OpenAI
 - For this project you need an OpenAI account to convert the recipes text into the format needed
@@ -44,6 +45,9 @@ Only if you want to be able to get recipes from instagram collections.
 - WARNING: Instagram may not like the automated bot entering your account
 - The maximum posts the instagrapi can see in a collection is 21 by default, after installing the package, change the default amount of "collection_medias" in "instagrapi/mixins/collection.py" to a bigger max
 
+## UI
+Simple streamlit UI that can be used by running: `streamlit run streamlit_ui.py`
+![streamlit_ui](readme_imgs/streamlit_ui.png)
 
 # Future Work
 - Make more variables configurable
