@@ -7,7 +7,7 @@ Retrieve recipes from posts of a private collection in Instagram or from any tex
 
 # Get ready
 
-- Install the packages in "requirements.txt": pip install -r requirements
+- Install the packages in "requirements.txt": `pip install -r requirements`
 
 ## Google services
 - Activate you Google API for Sheets, Docs and Drive in Google Cloud
@@ -21,7 +21,8 @@ Retrieve recipes from posts of a private collection in Instagram or from any tex
 - It must have the following string, that will be used to be replaced by the actual recipe information:
     - "<Title>"
     - "<ListIngredients>"
-    - "<NumberedSteps>"
+    - "<NumberedSteps>"y
+![recipe_template](readme_imgs/recipe_template.png)
 - After creating the template doc, have the document_id in the following environment variable "RECIPES_TEMPLATE_DOC_ID"
 - Create also a sheet DB file (make sure the Google Cloud project user has access to it), with the following columns (in order):
     - post_id
@@ -31,7 +32,6 @@ Retrieve recipes from posts of a private collection in Instagram or from any tex
     - doc_link
     - (you can add any more that you like after the above ones, it won't break the code)
 - Have the sheet DB id in the environment variable "RECIPES_DB_SHEET_ID"
-![recipe_done_from_template](readme_imgs/recipe_done_from_template.png)
 
 ## OpenAI
 - For this project you need an OpenAI account to convert the recipes text into the format needed
@@ -48,6 +48,9 @@ Only if you want to be able to get recipes from instagram collections.
 ## UI
 Simple streamlit UI that can be used by running: `streamlit run streamlit_ui.py`
 ![streamlit_ui](readme_imgs/streamlit_ui.png)
+
+Example of recipe done from the template
+![recipe_done_from_template](readme_imgs/recipe_done_from_template.png)
 
 # Future Work
 - Make more variables configurable
