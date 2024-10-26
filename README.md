@@ -10,7 +10,7 @@ Retrieve recipes from posts of a private collection in Instagram or from any tex
 - Install the packages in "requirements.txt": `pip install -r requirements`
 
 ## Google services
-- Activate you Google API for Sheets, Docs and Drive in Google Cloud
+- Activate your Google API for Sheets, Docs and Drive in Google Cloud
 - Get your service account json from Google Cloud so that you can access the Google APIs
 - Add the file path of the json to the environment variable "SERVICE_ACCOUNT_FILE"
 - Everything created in the Google Drive will be from the user of the Google API project of Google Cloud
@@ -19,9 +19,9 @@ Retrieve recipes from posts of a private collection in Instagram or from any tex
 ## Recipe Template
 - Create a doc template of what you want the recipe docs to look like
 - It must have the following string, that will be used to be replaced by the actual recipe information:
-    - "<Title>"
-    - "<ListIngredients>"
-    - "<NumberedSteps>"y
+    - `<Title>`
+    - `<ListIngredients>`
+    - `<NumberedSteps>`
 ![recipe_template](readme_imgs/recipe_template.png)
 - After creating the template doc, have the document_id in the following environment variable "RECIPES_TEMPLATE_DOC_ID"
 - Create also a sheet DB file (make sure the Google Cloud project user has access to it), with the following columns (in order):
