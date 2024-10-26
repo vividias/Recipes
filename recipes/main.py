@@ -1,3 +1,4 @@
+import sys
 import json
 from instagrapi.types import Media
 from recipes.schemas import Recipes, RecipeExists
@@ -84,7 +85,7 @@ def create_text_recipes_doc(text: str, image_url: str|None, video_url: str|None,
 
     image_url = image_url if image_url else ''
     video_url = video_url if video_url else ''
-    id = str(hash(text))
+    id = str(hash(text) % ((sys.maxsize + 1) * 2))
 
     create_recipes_doc(sheets_db=sheets_db, folder_id=folder_id, id=id, recipes=post_recipes,
                        recipes_template_doc_id=recipes_template_doc_id, video_url=video_url, image_url=image_url)

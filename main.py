@@ -1,3 +1,4 @@
+import sys
 import pandas as pd
 from services.google_api import RECIPES_DB_SHEET_ID, RECIPES_TEMPLATE_DOC_ID, drive_service, sheets_service, SHARE_EMAIL
 from services.google_api import create_find_google_folder
@@ -46,7 +47,7 @@ def get_recipes_text(text: str, image_url: str|None, video_url: str|None):
         df_sheets_DB = pd.DataFrame(data)
     DB_post_ids = list(df_sheets_DB['post_id'].values)
 
-    if str(hash(text)) in DB_post_ids:
+    if str(hash(text) % ((sys.maxsize + 1) * 2)) in DB_post_ids:
         print('Text recipes were already extracted.')
 
     else:
