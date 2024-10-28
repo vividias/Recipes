@@ -3,6 +3,7 @@
 Your favorites recipes all in the same place and in the same format! 
 Create a DB with all of the recipes with a link to a document for each one, based on a document template.
 Retrieve recipes from posts of a private collection in Instagram or from any text you copy from a link.
+![process_flow](readme_imgs/process_flow.png)
 
 
 # Get ready
